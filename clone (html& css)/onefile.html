@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        color: white;
+      }
+
+      body {
+        background-color: black;
+      }
+
+      .banner {
+        height: 750px;
+        width: 100%;
+        background-position: center;
+        background-image: url(assets/bg.jpg);
+        background-size: max(100vh, 100vw);
+      }
+
+      .box {
+        height: 750px;
+        width: 100%;
+        background-color: black;
+        opacity: 0.7;
+        position: absolute;
+        top: 0px;
+      }
+
+      .header {
+        max-width: 60vw;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0);
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        opacity: 0.9;
+        z-index: 1;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+      }
+
+      .buttons button {
+        height: 30px;
+        width: 80px;
+        z-index: 1;
+        margin: 3px;
+      }
+      .buttons .lang {
+        background-color: rgba(240, 255, 255, 0);
+        border: 2px wheat solid;
+        border-radius: 5px;
+      }
+      .buttons .sign {
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 5px;
+      }
+      .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        position: relative;
+        font-size: 30px;
+        top: 110px;
+        gap: 33px;
+      }
+      .heading h6 {
+        margin-top: 25px;
+      }
+      .heading p {
+        font-size: large;
+        margin-top: 15px;
+      }
+      .heading input {
+        height: 35px;
+        width: 320px;
+        background-color: rgba(49, 41, 41, 0.623);
+        border: 1px solid white;
+        border-radius: 4px;
+        margin-top: 30px;
+      }
+      .heading button {
+        height: 35px;
+        width: 180px;
+        background-color: red;
+        color: white;
+        border-radius: 4%;
+        border: 1px solid white;
+        font-size: large;
+      }
+      .seperation {
+        height: 7px;
+        width: 100%;
+        background-color: grey;
+      }
+      .page2 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 200px;
+      }
+      .page2 .text span {
+        font-size: 27px;
+      }
+      .page2 .text .big {
+        font-size: 50px;
+        font-weight: bolder;
+      }
+      .tv {
+        position: relative;
+      }
+
+      .tv img {
+        width: 555px;
+        position: relative;
+        z-index: 10;
+      }
+
+      .tv video {
+        position: absolute;
+        top: 51px;
+        right: 0;
+        width: 555px;
+      }
+
+      @media only screen and (max-width: 1188px) {
+        .page2 {
+          flex-wrap: wrap;
+          margin: 50px 60px;
+        }
+        .page2 .tv img {
+          height: 282px;
+          width: 334px;
+        }
+        .page2 .tv video {
+          width: 312px;
+          right: 10px;
+        }
+      }
+      .page3 .big {
+        font-size: 50px;
+        font-weight: 800;
+      }
+      .page3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 27px;
+        margin: 50px 180px;
+      }
+      .page3 img {
+        height: 400px;
+      }
+      .last {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .last h1 {
+        margin: 40px;
+        font-size: 50px;
+        font-weight: 900;
+      }
+      .last div {
+        transition: all 2s ease-out;
+        height: 75px;
+        width: 70vw;
+        background-color: rgb(63, 60, 60);
+        margin: 15px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .last span {
+        margin: 15px;
+        font-size: larger;
+      }
+      .last .icon {
+        font-size: 40px;
+      }
+      @media only screen and (max-width: 1180px) {
+        .page3 {
+          flex-wrap: wrap;
+        }
+        .page3 img {
+          width: 370px;
+          object-fit: cover;
+        }
+      }
+      footer {
+        margin: 80px 200px;
+        font-weight: 500;
+      }
+      footer .item-box {
+        padding: 40px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .footer-items {
+        height: 170px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background banner">
+      <nav class="header">
+        <div class="logo">
+          <img width="150px" src="assets/logo.svg" alt="" />
+        </div>
+        <div class="buttons">
+          <button class="lang">English</button>
+          <button class="sign">Sign In</button>
+        </div>
+      </nav>
+      <div class="box"></div>
+      <div class="heading">
+        <h1>Unlimited movies, <br />shows, and more</h1>
+        <h6>Starts at ₹149. Cancel at any time.</h6>
+        <p>
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+        <div>
+          <input type="email" name="" id="" placeholder="  Enter Email" />
+          <button>Get Started ></button>
+        </div>
+      </div>
+    </div>
+    <div class="seperation"></div>
+    <section class="page2">
+      <div class="text">
+        <span class="big"> Enjoy on your TV </span>
+        <br />
+        <span
+          >Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+          players and more.</span
+        >
+      </div>
+
+      <div class="tv">
+        <img
+          height="450px"
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+        />
+        <video
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+    </section>
+    <div class="seperation"></div>
+    <section class="page3">
+      <div class="phone">
+        <img
+          height="200px"
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <span class="big">Download your shows to watch offline</span>
+        <br />
+        <span
+          >Save your favourites easily and always have something to watch.</span
+        >
+      </div>
+    </section>
+    <div class="seperation"></div>
+    <section class="page2">
+      <div class="text">
+        <span class="big"> Watch everywhere </span>
+        <br />
+        <span
+          >Stream unlimited movies and TV shows on your phone, tablet, laptop,
+          and TV.</span
+        >
+      </div>
+
+      <div class="tv">
+        <img
+          height="450px"
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+        />
+        <video
+          src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+          autoplay
+          muted
+          loop
+        ></video>
+      </div>
+    </section>
+    <div class="seperation"></div>
+
+    <section class="page3">
+      <div class="phone">
+        <img
+          height="200px"
+          src="https://occ-0-2849-3646.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <span class="big">Create profiles for kids</span>
+        <br />
+        <span
+          >Send children on adventures with their favourite characters in a
+          space made just for them—free with your membership.</span
+        >
+      </div>
+    </section>
+    <div class="seperation"></div>
+    <section class="last">
+      <h1>Frequently Asked Questions</h1>
+      <div><span> What is Netflix?</span><span class="icon">+</span></div>
+      <div>
+        <span> much does NetFlix cost?</span><span class="icon">+</span>
+      </div>
+      <div>
+        <span> What can I watch on Netflix?</span><span class="icon">+</span>
+      </div>
+      <div><span>Where can I watch?</span><span class="icon">+</span></div>
+    </section>
+    <div class="seperation"></div>
+    <footer>
+      <div class="question">Questions? Call 000-800-919-1694</div>
+      <div class="item-box">
+        <div class="footer-items">
+          <a href="">Inventor Relations</a>
+          <a href="">Jobs</a>
+          <a href="">Ways to Watch</a>
+          <a href="">something</a>
+        </div>
+        <div class="footer-items">
+          <a href="">Help Centre</a>
+          <a href="">Account</a>
+          <a href="">Speed Test</a>
+          <a href="">Legal Notices</a>
+        </div>
+        <div class="footer-items">
+          <a href="">Media Centre</a>
+          <a href="">Privacy</a>
+          <a href="">Cookie Preferences</a>
+          <a href="">Corporate</a>
+        </div>
+        <div class="footer-items">
+          <a href="">Contact Us</a>
+          <a href="">Speed Test</a>
+          <a href="">Legal Notices</a>
+          <a href="">Only on Netflix</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
